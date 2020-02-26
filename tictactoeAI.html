@@ -30,7 +30,7 @@
 
 				// Generate possible open square with math function 
 
-				nextMove = Math.round(Math.random() * 10);
+				nextMove = Math.round(Math.random() * 9) + 1;
 
 				// Check if space is open
 
@@ -150,6 +150,9 @@
 			document.getElementById("8").value = "";
 			document.getElementById("9").value = "";
 			document.getElementById("enter-name").value = "";
+
+			// clears array playerMoves
+			playerMoves = "";
 		}
 
 		function whoWon() {
