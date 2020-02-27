@@ -10,13 +10,7 @@
 		var playerMoves = [];
 		var computerPlayer = "O";
 		var myPlayer = "X";
-		function disableGame() {
-			document.getElementById("game").disable = true;
-		}
-
-		function openGame() {
-			document.getElementById("game").disable = false;
-		}
+		
 
 		function generateMoveForComputer() {
 
@@ -30,7 +24,7 @@
 
 				// Generate possible open square with math function 
 
-				nextMove = Math.round(Math.random() * 9) + 1;
+				nextMove = Math.floor(Math.random() * 9) + 1;  
 
 				// Check if space is open
 
@@ -149,10 +143,8 @@
 			document.getElementById("7").value = "";
 			document.getElementById("8").value = "";
 			document.getElementById("9").value = "";
-			document.getElementById("enter-name").value = "";
-
-			// clears array playerMoves
-			playerMoves = "";
+			
+			playerMoves = [];
 		}
 
 		function whoWon() {
@@ -269,7 +261,7 @@
 <!-- Table -->
 
 
-<body onload="disableGame()">
+<body>
 
 	<div class="container">
 
@@ -349,7 +341,7 @@
 
 			<tr>
 
-				<td>Please enter X Player Name: <input id="enter-name" type="text" value="" oninput="openGame()"></td>
+				<td>Please enter X Player Name: <input id="enter-name" type="text" value=""></td>
 
 			</tr>
 
